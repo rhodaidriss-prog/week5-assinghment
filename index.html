@@ -1,0 +1,456 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendWise Dashboard</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head> <body>
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">S</span>
+            <span>SpendWise</span>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+
+            <a href="#" class="nav-item active">
+                <span>📊</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>💰</span>
+                <span>Expenses</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>📈</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>🎯</span>
+                <span>Budgets</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>💳</span>
+                <span>Accounts</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Spend smarter.</p>
+            <p>Save better.</p>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+
+            <div class="welcome">
+                <p class="eyebrow">Overview</p>
+
+                <h1>Good morning!</h1>
+
+                <p>
+                    Here's a summary of your spending.
+                </p>
+            </div>
+
+            <div class="header-actions">
+
+                <div class="date">
+                    <span>📅</span>
+                    <span>October 2026</span>
+                </div>
+
+                <div class="profile">
+                    <span class="profile-avatar">JD</span>
+
+                    <div>
+                        <strong>John Doe</strong>
+                        <small>Personal Account</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Budget Summary -->
+        <section class="summary">
+
+            <div class="summary-card">
+                <div>
+                    <span class="summary-label">Total Budget</span>
+                    <strong id="budgetDisplay">KSh 80,000</strong>
+                </div>
+
+                <span class="summary-icon">💰</span>
+            </div>
+
+
+            <div class="summary-card">
+                <div>
+                    <span class="summary-label">Total Spent</span>
+                    <strong id="expenseDisplay">KSh 42,500</strong>
+                </div>
+
+                <span class="summary-icon">📉</span>
+            </div>
+
+
+            <div class="summary-card">
+                <div>
+                    <span class="summary-label">Remaining</span>
+                    <strong id="remainingDisplay">KSh 37,500</strong>
+                </div>
+
+                <span class="summary-icon">🏦</span>
+            </div>
+
+        </section>
+
+
+        <!-- JavaScript Budget Tool -->
+        <section class="budget-tool">
+
+            <div>
+                <p class="eyebrow">Budget Calculator</p>
+
+                <h2>Check Your Budget</h2>
+
+                <p>
+                    Enter your budget and expenses to calculate your remaining balance.
+                </p>
+            </div>
+
+            <button id="calculateButton">
+                Calculate Balance
+            </button>
+
+        </section>
+
+
+        <!-- Category Section -->
+        <section class="categories">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">Spending</p>
+
+                    <h2>Budget Categories</h2>
+                </div>
+
+                <span class="category-count">
+                    6 categories
+                </span>
+
+            </div>
+
+
+            <div class="card-grid">
+
+                <!-- Food -->
+                <a href="#" class="category-card">
+
+                    <div class="card-top">
+
+                        <div class="category-icon food">
+                            🍽️
+                        </div>
+
+                        <span class="percentage">
+                            62%
+                        </span>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Food</h3>
+
+                        <p>
+                            Groceries and dining
+                        </p>
+
+                    </div>
+
+                    <div class="amount-row">
+
+                        <strong>
+                            KSh 7,500
+                        </strong>
+
+                        <span>
+                            of KSh 12,000
+                        </span>
+
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 62%;"></span>
+                    </div>
+
+                </a>
+
+
+                <!-- Transport -->
+                <a href="#" class="category-card">
+
+                    <div class="card-top">
+
+                        <div class="category-icon transport">
+                            🚗
+                        </div>
+
+                        <span class="percentage">
+                            45%
+                        </span>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Transport</h3>
+
+                        <p>
+                            Fuel and public transport
+                        </p>
+
+                    </div>
+
+                    <div class="amount-row">
+
+                        <strong>
+                            KSh 4,500
+                        </strong>
+
+                        <span>
+                            of KSh 10,000
+                        </span>
+
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 45%;"></span>
+                    </div>
+
+                </a>
+
+
+                <!-- Rent -->
+                <a href="#" class="category-card">
+
+                    <div class="card-top">
+
+                        <div class="category-icon rent">
+                            🏠
+                        </div>
+
+                        <span class="percentage">
+                            90%
+                        </span>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Rent</h3>
+
+                        <p>
+                            Monthly accommodation
+                        </p>
+
+                    </div>
+
+                    <div class="amount-row">
+
+                        <strong>
+                            KSh 18,000
+                        </strong>
+
+                        <span>
+                            of KSh 20,000
+                        </span>
+
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 90%;"></span>
+                    </div>
+
+                </a>
+
+
+                <!-- Entertainment -->
+                <a href="#" class="category-card">
+
+                    <div class="card-top">
+
+                        <div class="category-icon entertainment">
+                            🎮
+                        </div>
+
+                        <span class="percentage">
+                            40%
+                        </span>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Entertainment</h3>
+
+                        <p>
+                            Movies and activities
+                        </p>
+
+                    </div>
+
+                    <div class="amount-row">
+
+                        <strong>
+                            KSh 2,000
+                        </strong>
+
+                        <span>
+                            of KSh 5,000
+                        </span>
+
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 40%;"></span>
+                    </div>
+
+                </a>
+
+
+                <!-- Savings -->
+                <a href="#" class="category-card">
+
+                    <div class="card-top">
+
+                        <div class="category-icon savings">
+                            💎
+                        </div>
+
+                        <span class="percentage">
+                            75%
+                        </span>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Savings</h3>
+
+                        <p>
+                            Monthly savings goal
+                        </p>
+
+                    </div>
+
+                    <div class="amount-row">
+
+                        <strong>
+                            KSh 7,500
+                        </strong>
+
+                        <span>
+                            of KSh 10,000
+                        </span>
+
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 75%;"></span>
+                    </div>
+
+                </a>
+
+
+                <!-- Utilities -->
+                <a href="#" class="category-card">
+
+                    <div class="card-top">
+
+                        <div class="category-icon utilities">
+                            💡
+                        </div>
+
+                        <span class="percentage">
+                            55%
+                        </span>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Utilities</h3>
+
+                        <p>
+                            Electricity and internet
+                        </p>
+
+                    </div>
+
+                    <div class="amount-row">
+
+                        <strong>
+                            KSh 3,000
+                        </strong>
+
+                        <span>
+                            of KSh 5,500
+                        </span>
+
+                    </div>
+
+                    <div class="progress">
+                        <span style="width: 55%;"></span>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body> </html>
